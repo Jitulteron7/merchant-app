@@ -1,0 +1,26 @@
+name: Linting and formatting on PR 
+on:
+    pull_request:
+        branches:
+            - '**'
+    
+jobs:
+    CI:
+     name: Performs linting formatting on the application
+     runs-on: ubuntu-latest
+     steps:
+      - name: Performs linting, formatting on application
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies 
+        uses: npm install --legacy-peer-deps 
+    
+      - name: Run linting checks
+        uses: npm run lint:check
+
+      - name: Check formatting
+        uses: npm run format:check 
+
+
+
+
