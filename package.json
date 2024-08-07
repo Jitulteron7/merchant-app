@@ -5,8 +5,9 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "db:gen":"cd packages/db  && npx prisma generate && cd ../.."
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,json,md}\"",
+    "db:gen": "cd packages/db  && npx prisma generate && cd ../.."
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
